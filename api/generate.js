@@ -24,6 +24,8 @@ export default async function handler(req, res) {
       headers: {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${API_KEY}`,
+        "HTTP-Referer": "https://your-app.vercel.app",
+        "X-Title": "Interview Question Generator"
       },
       body: JSON.stringify({
         model: "meta-llama/llama-3.1-8b-instruct",
