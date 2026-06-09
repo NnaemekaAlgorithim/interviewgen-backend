@@ -19,7 +19,7 @@ export default async function handler(req, res) {
   const API_KEY = process.env.OPENROUTER_API_KEY; // Safely pulled from Vercel settings
 
   try {
-    const openRouterResponse = await fetch("https://openrouter.ai", {
+    const openRouterResponse = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
