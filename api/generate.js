@@ -24,7 +24,7 @@ export default async function handler(req, res) {
       headers: {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${API_KEY}`,
-        "HTTP-Referer": "https://interviewgen-backend.vercel.app",
+        "HTTP-Referer": "https://assesment1-topaz.vercel.app",
         "X-Title": "Interview Question Generator"
       },
       body: JSON.stringify({
