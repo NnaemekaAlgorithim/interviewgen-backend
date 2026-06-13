@@ -31,7 +31,20 @@ export default async function handler(req, res) {
         model: "meta-llama/llama-3.1-8b-instruct",
         messages: [{
           role: "user",
-          content: `Task: Check if "${title}" is a realistic job title. If NOT realistic, reply ONLY: INVALID. If realistic, provide exactly 3 strong interview questions for that role. Format as a numbered list.`
+          content: `Task: Check if "${title}" is a realistic job title. 
+If NOT realistic, reply ONLY: INVALID. 
+
+If realistic, provide exactly 3 strong, high-quality interview questions for that role. Underneath each question, provide a thoughtful and highly professional suggested answer blueprint.
+
+Format strictly like this:
+1. [Question text]
+Ans: [Thoughtful and professional answer suggestion]
+
+2. [Question text]
+Ans: [Thoughtful and professional answer suggestion]
+
+3. [Question text]
+Ans: [Thoughtful and professional answer suggestion]`
         }]
       })
     });
